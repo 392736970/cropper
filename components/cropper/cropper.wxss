@@ -1,0 +1,52 @@
+/* components/cropper/cropper.wxss */
+
+.cropper-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.cropper-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 119rpx; */
+   height: 50px;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: white;
+  text-align: center;
+  border-top: 1rpx solid #313131;
+  background: #000000;
+}
+
+/* 分割线 */
+
+.cropper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cropper-buttons .btn {
+  padding: 10rpx 50rpx;
+}
+
+.disable.btn{
+  color:rgba(255,255,255,.3);
+}
+
+.rotate{
+  position: fixed;
+  left: 30rpx;
+  bottom: 130rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

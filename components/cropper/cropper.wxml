@@ -1,0 +1,14 @@
+<!--components/cropper/cropper.wxml-->
+<view class="cropper-wrapper">
+  <canvas class="cropper" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="width:{{cropperOpt.width}}px;height:{{cropperOpt.height}}px;background-color: rgba(0, 0, 0, 0.8)" canvas-id="{{cropperOpt.id}}">
+   <cover-image src='/images/rotate.png' class='rotate' catchtap='rotate'></cover-image>
+  </canvas>
+  <canvas class="cropper" disable-scroll="true" style="position: fixed; top: -{{cropperOpt.width * cropperOpt.pixelRatio}}px; left: -{{cropperOpt.height * cropperOpt.pixelRatio}}px; width:{{cropperOpt.width * cropperOpt.pixelRatio}}px;height:{{cropperOpt.height * cropperOpt.pixelRatio}}px;"
+    canvas-id="{{cropperOpt.targetId}}">
+  </canvas>
+  <view class="cropper-buttons">
+    <view class='btn' catchtap='cancel'>取消</view>
+    <view class='btn  {{!isReduction?"disable":""}}' catchtap='reduction'>还原</view>
+    <view class='btn' catchtap='getCropperImage'>完成</view>
+  </view>
+</view>
